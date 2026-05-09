@@ -38,7 +38,7 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 32px;
       max-width: 1100px;
       width: 100%;
@@ -70,6 +70,7 @@
     .card:nth-child(1) .card-preview { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
     .card:nth-child(2) .card-preview { background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%); }
     .card:nth-child(3) .card-preview { background: linear-gradient(135deg, #111 0%, #333 100%); }
+    .card:nth-child(4) .card-preview { background: linear-gradient(135deg, #7C3AED 0%, #F472B6 100%); }
     .card-preview span {
       font-size: 48px;
       font-weight: 200;
@@ -174,6 +175,21 @@
           <span class="swatch" style="background:#ffffff; border-color:#ccc;"></span>
           <span class="swatch" style="background:#111111;"></span>
           <span class="swatch" style="background:#c9a96e;"></span>
+        </div>
+        <span class="card-arrow">View Mockup &rarr;</span>
+      </div>
+    </a>
+
+    <a href="mockup-4/" class="card">
+      <div class="card-preview"><span>04</span></div>
+      <div class="card-body">
+        <span class="card-num">Mockup 04</span>
+        <h2>Modern Clean</h2>
+        <p>Violet & pink. Ultra-clean design, no busy backgrounds, subtle gradients, and a full BI admin dashboard.</p>
+        <div class="card-colors">
+          <span class="swatch" style="background:#7C3AED;"></span>
+          <span class="swatch" style="background:#F472B6;"></span>
+          <span class="swatch" style="background:#ffffff; border-color:#ccc;"></span>
         </div>
         <span class="card-arrow">View Mockup &rarr;</span>
       </div>

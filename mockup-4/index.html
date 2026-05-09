@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encore Performers | The Place To Dance - Chantilly, VA</title>
+  <meta name="description" content="Encore Performers dance studio in Chantilly, VA. Jazz, Ballet, Hip Hop, Contemporary &amp; more for ages 3-18. Book a FREE trial class today!" />
+  <meta name="keywords" content="dance studio Chantilly VA, ballet classes Northern Virginia, hip hop dance kids, dance recital, summer dance camps" />
+  <link rel="canonical" href="https://hmartinezo.github.io/EncoreNewSite/mockup-4/" />
+  <meta property="og:title" content="Encore Performers | The Place To Dance" />
+  <meta property="og:description" content="Premier dance studio in Chantilly, VA. Ages 3-18. Jazz, Ballet, Hip Hop, Contemporary &amp; more." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #7C3AED;
+      --primary-light: #A78BFA;
+      --primary-dark: #5B21B6;
+      --accent: #F472B6;
+      --accent-light: #FBCFE8;
+      --bg: #FFFFFF;
+      --bg-alt: #F9FAFB;
+      --bg-warm: #FDF4FF;
+      --text: #1F2937;
+      --text-light: #6B7280;
+      --text-lighter: #9CA3AF;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(124,58,237,0.08);
+      --shadow-lg: 0 12px 48px rgba(124,58,237,0.12);
+      --chatbot-primary: #7C3AED;
+      --chatbot-bg: #1E1B4B;
+      --chatbot-text: #ffffff;
+      --chatbot-bubble-bot: #312E81;
+      --chatbot-bubble-user: #7C3AED;
+      --chatbot-user-text: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; overflow-x: hidden; }
+    h1, h2, h3 { font-family: 'DM Serif Display', serif; font-weight: 400; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* --- NAV --- */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 16px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(124,58,237,0.06);
+      transition: box-shadow 0.3s;
+    }
+    .nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+    .nav-logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px; color: var(--primary);
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a {
+      font-size: 14px; font-weight: 500; color: var(--text-light);
+      transition: color 0.2s; letter-spacing: 0.3px;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta {
+      background: var(--primary); color: #fff !important;
+      padding: 10px 24px; border-radius: 100px;
+      font-weight: 600; font-size: 13px;
+      transition: background 0.2s, transform 0.2s;
+      letter-spacing: 0.5px;
+    }
+    .nav-cta:hover { background: var(--primary-dark); transform: translateY(-1px); }
+    .nav-mobile { display: none; background: none; border: none; cursor: pointer; }
+    .nav-mobile svg { width: 28px; height: 28px; color: var(--text); }
+
+    /* --- HERO --- */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      background: linear-gradient(135deg, var(--bg-warm) 0%, var(--bg) 50%, #EEF2FF 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(124,58,237,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -150px; left: -150px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(244,114,182,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(124,58,237,0.08); color: var(--primary);
+      padding: 8px 20px; border-radius: 100px;
+      font-size: 13px; font-weight: 600; margin-bottom: 28px;
+      letter-spacing: 1px; text-transform: uppercase;
+    }
+    .hero-badge::before { content: '✦'; }
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.1; margin-bottom: 20px;
+      color: var(--text);
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 18px; color: var(--text-light);
+      max-width: 540px; margin: 0 auto 36px; line-height: 1.7;
+    }
+    .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 14px 32px; border-radius: 100px;
+      font-weight: 600; font-size: 15px;
+      transition: all 0.25s; display: inline-flex; align-items: center; gap: 8px;
+      cursor: pointer; border: none; font-family: inherit;
+    }
+    .btn-primary {
+      background: var(--primary); color: #fff;
+      box-shadow: 0 4px 16px rgba(124,58,237,0.3);
+    }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,58,237,0.35); }
+    .btn-outline {
+      background: transparent; color: var(--primary);
+      border: 2px solid rgba(124,58,237,0.2);
+    }
+    .btn-outline:hover { border-color: var(--primary); background: rgba(124,58,237,0.04); }
+    .hero-stats {
+      display: flex; gap: 48px; justify-content: center;
+      margin-top: 56px; padding-top: 40px;
+      border-top: 1px solid rgba(124,58,237,0.08);
+    }
+    .hero-stat h3 { font-size: 32px; color: var(--primary); font-family: 'Inter', sans-serif; font-weight: 700; }
+    .hero-stat p { font-size: 13px; color: var(--text-lighter); margin-top: 4px; }
+
+    /* --- SECTIONS --- */
+    section { padding: 100px 24px; }
+    .section-header { text-align: center; max-width: 600px; margin: 0 auto 60px; }
+    .section-header h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px; }
+    .section-header p { color: var(--text-light); font-size: 16px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    /* --- PROGRAMS --- */
+    .programs { background: var(--bg-alt); }
+    .programs-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .program-card {
+      background: #fff; border-radius: var(--radius);
+      padding: 36px 28px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .program-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .program-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .program-card:hover::before { opacity: 1; }
+    .program-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: var(--bg-warm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; margin-bottom: 20px;
+    }
+    .program-card h3 { font-size: 20px; margin-bottom: 8px; }
+    .program-card .ages {
+      font-size: 12px; font-weight: 600; color: var(--primary);
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;
+    }
+    .program-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+
+    /* --- STYLES --- */
+    .styles { background: var(--bg); }
+    .styles-grid {
+      display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+      max-width: 800px; margin: 0 auto;
+    }
+    .style-tag {
+      padding: 12px 24px; border-radius: 100px;
+      background: var(--bg-warm); color: var(--primary-dark);
+      font-weight: 500; font-size: 15px;
+      transition: all 0.25s; cursor: default;
+      border: 1px solid transparent;
+    }
+    .style-tag:hover {
+      background: var(--primary); color: #fff;
+      transform: scale(1.05);
+    }
+
+    /* --- WHY SECTION --- */
+    .why { background: var(--bg-alt); }
+    .why-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+    .why-card {
+      display: flex; gap: 20px; align-items: flex-start;
+      padding: 28px; background: #fff;
+      border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    .why-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+    .why-card h3 { font-size: 17px; margin-bottom: 6px; }
+    .why-card p { font-size: 14px; color: var(--text-light); }
+
+    /* --- SUMMER CAMPS --- */
+    .camps { background: linear-gradient(135deg, #1E1B4B, #312E81); color: #fff; }
+    .camps .section-header h2 { color: #fff; }
+    .camps .section-header p { color: rgba(255,255,255,0.6); }
+    .camps-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .camp-card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 28px 24px; text-align: center;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .camp-card:hover { background: rgba(255,255,255,0.14); transform: translateY(-4px); }
+    .camp-emoji { font-size: 36px; margin-bottom: 14px; }
+    .camp-card h3 { font-size: 18px; margin-bottom: 8px; color: #fff; }
+    .camp-card p { font-size: 13px; color: rgba(255,255,255,0.6); }
+
+    /* --- TESTIMONIALS --- */
+    .testimonials { background: var(--bg); }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .testimonial-card {
+      padding: 32px;
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+      border: 1px solid rgba(124,58,237,0.06);
+    }
+    .testimonial-stars { color: #FBBF24; font-size: 16px; margin-bottom: 16px; letter-spacing: 2px; }
+    .testimonial-card blockquote {
+      font-size: 15px; color: var(--text); line-height: 1.7;
+      margin-bottom: 20px; font-style: italic;
+    }
+    .testimonial-author { font-size: 13px; font-weight: 600; color: var(--primary); }
+    .testimonial-role { font-size: 12px; color: var(--text-lighter); }
+
+    /* --- CTA --- */
+    .cta {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      text-align: center; color: #fff;
+      padding: 80px 24px; border-radius: 0;
+    }
+    .cta h2 { font-size: clamp(28px, 4vw, 44px); margin-bottom: 16px; color: #fff; }
+    .cta p { font-size: 17px; opacity: 0.9; margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .btn-white {
+      background: #fff; color: var(--primary);
+      font-weight: 700; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
+
+    /* --- FOOTER --- */
+    .footer {
+      background: #111827; color: rgba(255,255,255,0.6);
+      padding: 60px 24px 30px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; max-width: 1200px; margin: 0 auto;
+    }
+    .footer h4 { color: #fff; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+    .footer p, .footer a { font-size: 13px; }
+    .footer a { color: rgba(255,255,255,0.6); transition: color 0.2s; }
+    .footer a:hover { color: var(--primary-light); }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-brand p { max-width: 280px; line-height: 1.6; margin-top: 8px; }
+    .footer-social { display: flex; gap: 12px; margin-top: 16px; }
+    .footer-social a {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: rgba(255,255,255,0.06);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; transition: background 0.2s;
+    }
+    .footer-social a:hover { background: var(--primary); color: #fff; }
+    .footer-bottom {
+      text-align: center; margin-top: 40px; padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 12px;
+    }
+
+    /* --- ANIMATIONS --- */
+    .fade-up {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      .nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .nav-mobile { display: block; }
+      .hero-stats { gap: 24px; }
+      .hero-stat h3 { font-size: 24px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .hero-stats { flex-direction: column; gap: 16px; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">Encore <span>Performers</span></a>
+    <div class="nav-links">
+      <a href="#programs">Programs</a>
+      <a href="#styles">Styles</a>
+      <a href="#camps">Summer</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="https://app.gostudiopro.com/online/classes.php?account_id=27537" class="nav-cta">REGISTER NOW</a>
+    </div>
+    <button class="nav-mobile" id="mobile-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content fade-up">
+      <div class="hero-badge">Chantilly, VA</div>
+      <h1>Where Every Child Finds Their <em>Rhythm</em></h1>
+      <p>Encore Performers is Northern Virginia's premier dance studio. From first plies to center stage, we nurture confidence, creativity, and joy in every dancer ages 3-18.</p>
+      <div class="hero-buttons">
+        <a href="https://encoreperformers1.dncestudios.com/get-started-new" class="btn btn-primary">Book a FREE Trial Class →</a>
+        <a href="#programs" class="btn btn-outline">Explore Programs</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <h3>20+</h3>
+          <p>Years of Excellence</p>
+        </div>
+        <div class="hero-stat">
+          <h3>500+</h3>
+          <p>Happy Dancers</p>
+        </div>
+        <div class="hero-stat">
+          <h3>10+</h3>
+          <p>Dance Styles</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="programs" id="programs">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2>Programs for Every Age</h2>
+        <p>From tiny toes to teen performers, we have the perfect program for your child's dance journey.</p>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card fade-up">
+          <div class="program-icon">🌟</div>
+          <div class="ages">Ages 3-6</div>
+          <h3>Munchkins & Minis</h3>
+          <p>A magical introduction to dance through creative movement, rhythm games, and imagination. Where the love of dance begins.</p>
+        </div>
+        <div class="program-card fade-up">
+          <div class="program-icon">💫</div>
+          <div class="ages">Ages 7-11</div>
+          <h3>Juniors</h3>
+          <p>Building technique and artistry across multiple styles. Dancers develop discipline, teamwork, and a deeper love for the art.</p>
+        </div>
+        <div class="program-card fade-up">
+          <div class="program-icon">🔥</div>
+          <div class="ages">Ages 10-12</div>
+          <h3>Tweens</h3>
+          <p>Bridging the gap with challenging choreography and performance opportunities. A pivotal time to refine skills and find your voice.</p>
+        </div>
+        <div class="program-card fade-up">
+          <div class="program-icon">⭐</div>
+          <div class="ages">Ages 12-18</div>
+          <h3>Teens</h3>
+          <p>Pre-professional training with advanced technique, performance teams, and college prep. Dream big, dance bigger.</p>
+        </div>
+        <div class="program-card fade-up">
+          <div class="program-icon">🏆</div>
+          <div class="ages">By Audition</div>
+          <h3>ITP & ETAP</h3>
+          <p>Our elite competitive programs for dedicated dancers. Intensive Training Program and Encore Training for Advanced Performers.</p>
+        </div>
+        <div class="program-card fade-up">
+          <div class="program-icon">🎭</div>
+          <div class="ages">Ages 8-18</div>
+          <h3>Musical Theatre</h3>
+          <p>Sing, act, and dance! Our musical theatre company produces full-scale shows combining all three performing arts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STYLES -->
+  <section class="styles" id="styles">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2>Dance Styles We Teach</h2>
+        <p>With over 10 genres, your child can explore everything from classical ballet to the latest trending choreography.</p>
+      </div>
+      <div class="styles-grid fade-up">
+        <span class="style-tag">Ballet & Pointe</span>
+        <span class="style-tag">Jazz</span>
+        <span class="style-tag">Tap</span>
+        <span class="style-tag">Hip Hop</span>
+        <span class="style-tag">Contemporary</span>
+        <span class="style-tag">Musical Theatre</span>
+        <span class="style-tag">Ballroom</span>
+        <span class="style-tag">Lyrical</span>
+        <span class="style-tag">Acro</span>
+        <span class="style-tag">K-Pop</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ENCORE -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2>Why Families Choose Encore</h2>
+        <p>We don't just teach dance. We build confidence, friendships, and lifelong memories.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card fade-up">
+          <div class="why-icon">🎯</div>
+          <div>
+            <h3>Professional Faculty</h3>
+            <p>Our instructors hold degrees and certifications in dance education. They inspire, motivate, and mentor every student.</p>
+          </div>
+        </div>
+        <div class="why-card fade-up">
+          <div>
+            <h3>Grand Annual Recital</h3>
+            <p>Every dancer shines on stage in our full-scale production at a professional theatre with lights, costumes, and a sold-out audience.</p>
+          </div>
+          <div class="why-icon">🎪</div>
+        </div>
+        <div class="why-card fade-up">
+          <div class="why-icon">🤝</div>
+          <div>
+            <h3>Family-First Culture</h3>
+            <p>We're more than a studio -- we're a community. Parents love our welcoming atmosphere and transparent communication.</p>
+          </div>
+        </div>
+        <div class="why-card fade-up">
+          <div>
+            <h3>State-of-the-Art Facility</h3>
+            <p>Sprung dance floors, professional sound systems, viewing windows for parents, and a clean, safe environment.</p>
+          </div>
+          <div class="why-icon">🏛️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUMMER CAMPS -->
+  <section class="camps" id="camps">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2>Summer Dance Camps 2026</h2>
+        <p>The best summer starts here. Week-long themed camps that combine dance, fun, and friendship.</p>
+      </div>
+      <div class="camps-grid">
+        <div class="camp-card fade-up">
+          <div class="camp-emoji">🎬</div>
+          <h3>Movie Magic</h3>
+          <p>Ages 6-13 -- Dance to your favorite film soundtracks</p>
+        </div>
+        <div class="camp-card fade-up">
+          <div class="camp-emoji">🎤</div>
+          <h3>Broadway Bound</h3>
+          <p>Ages 6-13 -- Sing, act, and dance like a star</p>
+        </div>
+        <div class="camp-card fade-up">
+          <div class="camp-emoji">🇰🇷</div>
+          <h3>K-Pop Dance</h3>
+          <p>Ages 6-13 -- Learn trending K-Pop choreography</p>
+        </div>
+        <div class="camp-card fade-up">
+          <div class="camp-emoji">🏰</div>
+          <h3>Disney Princess</h3>
+          <p>Ages 4-6 -- A magical mini camp for the littlest dancers</p>
+        </div>
+        <div class="camp-card fade-up">
+          <div class="camp-emoji">📱</div>
+          <h3>TikTok Trends</h3>
+          <p>Ages 6-13 -- Master the viral dances of the moment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header fade-up">
+        <h2>What Parents Say</h2>
+        <p>Don't take our word for it. Hear from the families who call Encore home.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"My daughter has blossomed since joining Encore. The teachers genuinely care about each child's growth, not just as dancers but as people."</blockquote>
+          <div class="testimonial-author">Sarah M.</div>
+          <div class="testimonial-role">Parent of Junior dancer</div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"The recital was absolutely incredible. Professional quality -- I couldn't believe my 5-year-old was performing on that stage. We're hooked!"</blockquote>
+          <div class="testimonial-author">David K.</div>
+          <div class="testimonial-role">Parent of Munchkin dancer</div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">★★★★★</div>
+          <blockquote>"We've tried three other studios. Encore is on a completely different level. The training, the culture, the community -- it's exceptional."</blockquote>
+          <div class="testimonial-author">Jennifer L.</div>
+          <div class="testimonial-role">Parent of Teen & ETAP dancer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container fade-up">
+      <h2>Ready to Start Dancing?</h2>
+      <p>Book a free trial class today and discover why hundreds of families choose Encore Performers.</p>
+      <a href="https://encoreperformers1.dncestudios.com/get-started-new" class="btn btn-white">Book Your FREE Trial →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Encore Performers</h4>
+        <p>The Place To Dance. Nurturing young dancers in Chantilly, Virginia since day one. Jazz, Ballet, Hip Hop, Contemporary, and so much more.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/encoreperformers/" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/EncorePerformersDance/" aria-label="Facebook">FB</a>
+          <a href="https://www.youtube.com/@encoreperformers5558" aria-label="YouTube">YT</a>
+          <a href="https://www.tiktok.com/@encoreperformers96" aria-label="TikTok">TT</a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#styles">Dance Styles</a></li>
+          <li><a href="#camps">Summer Camps</a></li>
+          <li><a href="https://app.gostudiopro.com/online/classes.php?account_id=27537">Parent Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li>703-222-5511</li>
+          <li><a href="mailto:encoreperformers@gmail.com">encoreperformers@gmail.com</a></li>
+          <li>4299 Henninger Ct<br>Chantilly, VA 20151</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Started</h4>
+        <ul class="footer-links">
+          <li><a href="https://encoreperformers1.dncestudios.com/get-started-new">Free Trial Class</a></li>
+          <li><a href="https://app.gostudiopro.com/online/classes.php?account_id=27537">Register Online</a></li>
+          <li><a href="admin.html">Studio Admin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Encore Performers. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Intersection Observer for fade-up
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Mobile nav
+    document.getElementById('mobile-toggle').addEventListener('click', function() {
+      const links = document.querySelector('.nav-links');
+      if (links.style.display === 'flex') {
+        links.style.display = 'none';
+      } else {
+        links.style.display = 'flex';
+        links.style.flexDirection = 'column';
+        links.style.position = 'absolute';
+        links.style.top = '60px';
+        links.style.right = '20px';
+        links.style.background = '#fff';
+        links.style.padding = '20px';
+        links.style.borderRadius = '12px';
+        links.style.boxShadow = '0 8px 32px rgba(0,0,0,0.12)';
+        links.style.gap = '16px';
+      }
+    });
+  </script>
+  <script src="../shared/analytics/tracker.js" defer></script>
+  <script src="../shared/chatbot/chatbot.js" data-icon="9" defer></script>
+</body>
+</html>

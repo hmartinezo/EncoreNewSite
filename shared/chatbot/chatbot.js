@@ -139,36 +139,20 @@ RULES:
     const container = document.createElement('div');
     container.id = 'encore-chatbot';
     container.innerHTML = `
-      <button id="encore-chat-toggle" aria-label="Chat with us">
-        <svg width="36" height="36" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-          <!-- head -->
-          <circle cx="32" cy="14" r="8" fill="currentColor"/>
-          <!-- body -->
-          <line x1="32" y1="22" x2="32" y2="38" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-          <!-- arms -->
-          <line x1="32" y1="28" x2="20" y2="24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="32" y1="28" x2="44" y2="22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-          <!-- tutu skirt -->
-          <ellipse cx="32" cy="38" rx="14" ry="5" fill="currentColor" opacity="0.85"/>
-          <path d="M18 38 Q22 48 26 38" fill="currentColor" opacity="0.6"/>
-          <path d="M24 38 Q28 50 32 38" fill="currentColor" opacity="0.6"/>
-          <path d="M30 38 Q34 50 38 38" fill="currentColor" opacity="0.6"/>
-          <path d="M36 38 Q40 48 44 38" fill="currentColor" opacity="0.6"/>
-          <!-- legs -->
-          <line x1="30" y1="43" x2="26" y2="56" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="34" y1="43" x2="38" y2="56" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-          <!-- feet (pointe) -->
-          <circle cx="26" cy="57" r="2" fill="currentColor"/>
-          <circle cx="38" cy="57" r="2" fill="currentColor"/>
+      <button id="encore-chat-toggle" aria-label="Chat with Tutu, our AI assistant">
+        <svg width="32" height="32" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+          <circle cx="58" cy="18" r="9"/>
+          <path d="M55 27 C50 35, 42 40, 38 52 L28 48 C26 47, 24 49, 25 51 L38 56 C36 62, 35 68, 36 74 L30 90 C29 93, 33 94, 34 91 L40 75 C42 75, 44 75, 46 74 L52 91 C53 94, 57 93, 56 90 L50 74 C52 68, 52 62, 50 56 L60 40 C64 38, 72 36, 78 38 C81 39, 82 35, 79 34 C72 31, 63 32, 58 35 L62 27 C60 25, 56 25, 55 27Z"/>
+          <path d="M38 52 C30 55, 24 50, 20 44 C18 41, 14 43, 16 46 C21 54, 28 58, 38 56Z" opacity="0.9"/>
         </svg>
       </button>
       <div id="encore-chat-window" class="encore-chat-hidden">
         <div id="encore-chat-header">
-          <span>Ask Encore AI</span>
+          <span>Ask Tutu</span>
           <button id="encore-chat-close" aria-label="Close chat">&times;</button>
         </div>
         <div id="encore-chat-messages">
-          <div class="encore-msg encore-bot">Hi! I'm the Encore Performers AI assistant. Ask me anything about our dance classes, programs, registration, or schedule! 💃</div>
+          <div class="encore-msg encore-bot">Hi! I'm Tutu, your Encore Performers dance assistant! Ask me anything about classes, programs, registration, or summer camps! 💃</div>
         </div>
         <div id="encore-chat-remaining">${remainingQuestions()} questions remaining today</div>
         <form id="encore-chat-form">

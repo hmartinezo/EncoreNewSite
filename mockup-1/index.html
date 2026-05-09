@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encore Performers | Premier Dance Studio in Chantilly, VA | Northern Virginia</title>
+  <meta name="description" content="Encore Performers is the premier dance studio in Chantilly, VA offering Jazz, Tap, Hip Hop, Ballet, Contemporary, and Musical Theatre classes for ages 3 through teen. Book a FREE trial class today!" />
+  <meta name="keywords" content="dance studio Chantilly VA, dance classes Northern Virginia, kids dance classes, ballet classes, hip hop classes, jazz dance, tap dance, dance recital, summer dance camp" />
+  <link rel="canonical" href="https://www.encoreperformers.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Encore Performers | The Place To Dance" />
+  <meta property="og:description" content="Premier dance studio in Northern Virginia. Jazz, Tap, Hip Hop, Ballet, Contemporary & more for ages 3-18. Book a FREE trial class!" />
+  <meta property="og:image" content="../shared/images/hero-studio.jpg" />
+  <meta property="og:url" content="https://www.encoreperformers.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Encore Performers | The Place To Dance" />
+  <meta name="twitter:description" content="Premier dance studio in Northern Virginia. Book a FREE trial class!" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DanceSchool",
+    "name": "Encore Performers",
+    "description": "The premier dance studio in Northern Virginia offering Jazz, Tap, Hip Hop, Ballet, Contemporary, Musical Theatre, and Ballroom classes for ages 3 through teen.",
+    "url": "https://www.encoreperformers.com",
+    "telephone": "+1-703-222-5511",
+    "email": "encoreperformers@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4299 Henninger Ct",
+      "addressLocality": "Chantilly",
+      "addressRegion": "VA",
+      "postalCode": "20151",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.8764,
+      "longitude": -77.4320
+    },
+    "sameAs": [
+      "https://www.instagram.com/encoreperformers/",
+      "https://www.facebook.com/EncorePerformersDance",
+      "https://www.youtube.com/@encoreperformers5558",
+      "https://www.tiktok.com/@encoreperformers96"
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "21:00"
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What age groups does Encore Performers offer dance classes for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer dance classes for ages 3 through 18. Our programs include Munchkin & Minis (ages 3-6), Juniors (ages 7-11), Tweens (ages 10-12), and Teens (ages 12-18), plus advanced ITP and ETAP competitive programs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What styles of dance does Encore Performers teach?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer Jazz, Tap, Hip Hop, Ballet/Pointe, Contemporary, Musical Theatre, Ballroom, and more. Classes are available for all skill levels from beginner to advanced."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Encore Performers offer a free trial class?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We offer a FREE trial class for all new students. You can book your trial at encoreperformers1.dncestudios.com/get-started-new or call us at 703-222-5511."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Encore Performers located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Encore Performers is located at 4299 Henninger Ct, Chantilly, VA 20151, in Northern Virginia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Encore Performers have summer dance camps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We offer Mini Camps (ages 4-6), themed Dance Camps (ages 6-13) including Broadway, KPOP, Movie Magic, and Disney themes, Intensives for advanced dancers, and evening summer dance classes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Encore Performers have a dance recital?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Our annual Spring Recital is a full-scale show at a professional theatre with professional lighting, stage crew, and a sold-out audience. All Encore students get to perform."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">ENCORE <span>PERFORMERS</span></a>
+      <button class="nav-menu-btn" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#why-encore">Why Encore</a></li>
+        <li><a href="#summer">Summer</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://encoreperformers1.dncestudios.com/get-started-new" class="nav-cta" target="_blank" rel="noopener">FREE TRIAL CLASS</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="hero">
+    <div class="hero-overlay"></div>
+    <video class="hero-video" autoplay muted loop playsinline poster="../shared/images/hero-studio.jpg">
+      <source src="https://videos.pexels.com/video-files/4842370/4842370-hd_1920_1080_25fps.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-content">
+      <p class="hero-subtitle">Welcome to</p>
+      <h1 class="hero-title">ENCORE PERFORMERS</h1>
+      <p class="hero-tagline">The Premier Dance Studio in Northern Virginia</p>
+      <div class="hero-buttons">
+        <a href="https://encoreperformers1.dncestudios.com/get-started-new" class="btn btn-primary" target="_blank" rel="noopener">BOOK A FREE TRIAL</a>
+        <a href="#programs" class="btn btn-outline">EXPLORE CLASSES</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="about-image reveal-left">
+            <img src="../shared/images/hero-studio.jpg" alt="Encore Performers dance studio in Chantilly, Virginia" loading="lazy" />
+          </div>
+          <div class="about-text reveal-right">
+            <p class="section-label">About Us</p>
+            <h2 class="section-title">Join the Encore <em>Dance Family</em></h2>
+            <p>Our dancers share a special bond, built on passion, support, and celebration. We believe positivity brings out the best in everyone, both in and out of the studio.</p>
+            <p>Whether you are brand new to dance, dancing for fun, or in pursuit of a professional career, we have a program to support your goals and foster your love of dance.</p>
+            <a href="https://encoreperformers1.dncestudios.com/get-started-new" class="btn btn-primary" target="_blank" rel="noopener">GET STARTED</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section id="stats" class="section section-dark">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal-up">
+            <span class="stat-number" data-target="9">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Dance Styles</p>
+          </div>
+          <div class="stat-item reveal-up">
+            <span class="stat-number" data-target="5">0</span>
+            <p class="stat-label">Age Groups</p>
+          </div>
+          <div class="stat-item reveal-up">
+            <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+            <p class="stat-label">Classes Per Week</p>
+          </div>
+          <div class="stat-item reveal-up">
+            <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+            <p class="stat-label">Heart & Soul</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="section">
+      <div class="container">
+        <p class="section-label center">Our Programs</p>
+        <h2 class="section-title center">From <em>Beginner</em> to Beyond</h2>
+        <p class="section-subtitle center">Beginner through advanced classes available for every age group.</p>
+        <div class="programs-grid">
+          <a href="https://encoreperformers1.dncestudios.com/get-started-new" target="_blank" rel="noopener" class="program-card reveal-up">
+            <div class="program-card-inner">
+              <div class="program-icon">🌟</div>
+              <h3>Munchkin & Minis</h3>
+              <p class="program-age">Ages 3-6</p>
+              <p>Magical introductory classes designed to inspire a lifelong love of dance through play, creativity, and movement.</p>
+              <span class="program-link">Learn More &rarr;</span>
+            </div>
+          </a>
+          <a href="https://encoreperformers1.dncestudios.com/get-started-new" target="_blank" rel="noopener" class="program-card reveal-up">
+            <div class="program-card-inner">
+              <div class="program-icon">💫</div>
+              <h3>Juniors</h3>
+              <p class="program-age">Ages 7-11</p>
+              <p>Build technique, confidence, and friendships in a supportive environment across multiple dance styles.</p>
+              <span class="program-link">Learn More &rarr;</span>
+            </div>
+          </a>
+          <a href="https://encoreperformers1.dncestudios.com/get-started-new" target="_blank" rel="noopener" class="program-card reveal-up">
+            <div class="program-card-inner">
+              <div class="program-icon">✨</div>
+              <h3>Tweens</h3>
+              <p class="program-age">Ages 10-12</p>
+              <p>Challenge yourself with advancing technique and artistic expression as you grow into a confident performer.</p>
+              <span class="program-link">Learn More &rarr;</span>
+            </div>
+          </a>
+          <a href="https://encoreperformers1.dncestudios.com/get-started-new" target="_blank" rel="noopener" class="program-card reveal-up">
+            <div class="program-card-inner">
+              <div class="program-icon">🔥</div>
+              <h3>Teens</h3>
+              <p class="program-age">Ages 12-18</p>
+              <p>Elevate your artistry with advanced training in diverse styles from Jazz and Contemporary to Hip Hop and Musical Theatre.</p>
+              <span class="program-link">Learn More &rarr;</span>
+            </div>
+          </a>
+          <a href="https://encoreperformers1.dncestudios.com/get-started-new" target="_blank" rel="noopener" class="program-card reveal-up program-card-wide">
+            <div class="program-card-inner">
+              <div class="program-icon">🏆</div>
+              <h3>ITP & ETAP</h3>
+              <p class="program-age">Advanced / Competitive</p>
+              <p>Our Intermediate Training Program (ITP) and Encore Training for Advanced Performers (ETAP) offer intensive, competition-level training for dedicated dancers pursuing excellence.</p>
+              <span class="program-link">Learn More &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dance Styles -->
+    <section id="styles" class="section section-dark">
+      <div class="container">
+        <p class="section-label center">Dance Styles</p>
+        <h2 class="section-title center">Find Your <em>Rhythm</em></h2>
+        <div class="styles-marquee">
+          <div class="styles-track">
+            <span>Jazz</span><span class="dot">&bull;</span>
+            <span>Tap</span><span class="dot">&bull;</span>
+            <span>Hip Hop</span><span class="dot">&bull;</span>
+            <span>Ballet</span><span class="dot">&bull;</span>
+            <span>Pointe</span><span class="dot">&bull;</span>
+            <span>Contemporary</span><span class="dot">&bull;</span>
+            <span>Musical Theatre</span><span class="dot">&bull;</span>
+            <span>Ballroom</span><span class="dot">&bull;</span>
+            <span>Jazz</span><span class="dot">&bull;</span>
+            <span>Tap</span><span class="dot">&bull;</span>
+            <span>Hip Hop</span><span class="dot">&bull;</span>
+            <span>Ballet</span><span class="dot">&bull;</span>
+            <span>Pointe</span><span class="dot">&bull;</span>
+            <span>Contemporary</span><span class="dot">&bull;</span>
+            <span>Musical Theatre</span><span class="dot">&bull;</span>
+            <span>Ballroom</span><span class="dot">&bull;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Encore -->
+    <section id="why-encore" class="section">
+      <div class="container">
+        <p class="section-label center">Why Choose Us</p>
+        <h2 class="section-title center">The Encore <em>Difference</em></h2>
+        <div class="pillars-grid">
+          <div class="pillar reveal-up">
+            <div class="pillar-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Dance Family</h3>
+            <p>More than a studio -- a supportive community where every dancer is celebrated and friendships last a lifetime.</p>
+          </div>
+          <div class="pillar reveal-up">
+            <div class="pillar-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3>Expert Instruction</h3>
+            <p>Professional, passionate teachers who nurture talent and inspire confidence at every level.</p>
+          </div>
+          <div class="pillar reveal-up">
+            <div class="pillar-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3>Positive Environment</h3>
+            <p>We believe positivity brings out the best in every dancer, building confidence that extends far beyond the studio.</p>
+          </div>
+          <div class="pillar reveal-up">
+            <div class="pillar-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Performance Opportunities</h3>
+            <p>From our spectacular annual recital to competitive teams and musical theatre, every dancer gets their moment to shine on stage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summer Programs -->
+    <section id="summer" class="section section-accent">
+      <div class="container">
+        <p class="section-label center">Summer 2026</p>
+        <h2 class="section-title center">Summer Dance <em>Programs</em></h2>
+        <p class="section-subtitle center">Camps, intensives, and classes for every age and level.</p>
+        <div class="summer-grid">
+          <div class="summer-card reveal-up">
+            <img src="../shared/images/summer-camp.png" alt="Broadway Dance Intensive summer camp at Encore Performers" loading="lazy" />
+            <div class="summer-card-body">
+              <h3>Broadway Intensive</h3>
+              <p>June 19-22 &bull; ITP & ETAP</p>
+            </div>
+          </div>
+          <div class="summer-card reveal-up">
+            <img src="../shared/images/kpop-camp.png" alt="KPOP Hip Hop dance camp for kids at Encore Performers" loading="lazy" />
+            <div class="summer-card-body">
+              <h3>KPOP Hip Hop Camp</h3>
+              <p>Multiple sessions &bull; Ages 6-13</p>
+            </div>
+          </div>
+          <div class="summer-card reveal-up">
+            <img src="../shared/images/broadway-camp.png" alt="Stars On Stage dance camp at Encore Performers" loading="lazy" />
+            <div class="summer-card-body">
+              <h3>Stars On Stage Camp</h3>
+              <p>June 22-26 &bull; Ages 6-13</p>
+            </div>
+          </div>
+          <div class="summer-card reveal-up">
+            <img src="../shared/images/movie-camp.png" alt="Movie Magic dance camp at Encore Performers" loading="lazy" />
+            <div class="summer-card-body">
+              <h3>Movie Magic Camp</h3>
+              <p>July 13-17 &bull; Ages 6-13</p>
+            </div>
+          </div>
+        </div>
+        <div class="center" style="margin-top: 2.5rem;">
+          <a href="https://app.gostudiopro.com/online/classes.php?account_id=27537" class="btn btn-primary" target="_blank" rel="noopener">VIEW ALL SUMMER PROGRAMS</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <p class="section-label center">Testimonials</p>
+        <h2 class="section-title center">What Our Families <em>Say</em></h2>
+        <div class="testimonials-carousel">
+          <div class="testimonial-track" id="testimonial-track">
+            <div class="testimonial-card">
+              <div class="testimonial-quote">&ldquo;</div>
+              <p>Our dancers share a special bond, built on passion, support, and celebration. We believe positivity brings out the best in everyone, both in and out of the studio. Come take a free trial class and see just how much you will love dancing with us at Encore Performers.</p>
+              <div class="testimonial-author">
+                <strong>Encore Family</strong>
+                <span>Studio Community</span>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote">&ldquo;</div>
+              <p>The teachers at Encore are incredible -- they push our daughter to grow while making every class fun and encouraging. She has gained so much confidence since she started dancing here!</p>
+              <div class="testimonial-author">
+                <strong>Encore Parent</strong>
+                <span>Dance Family</span>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote">&ldquo;</div>
+              <p>From the very first class, we knew this was the right studio. The supportive environment and professional instruction set Encore apart from every other studio we visited.</p>
+              <div class="testimonial-author">
+                <strong>Encore Parent</strong>
+                <span>Dance Family</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-dots" id="testimonial-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recital / Showtime -->
+    <section id="recital" class="section section-dark">
+      <div class="container">
+        <div class="section-grid reverse">
+          <div class="about-text reveal-left">
+            <p class="section-label">Showtime!</p>
+            <h2 class="section-title">Perform & <em>Entertain</em></h2>
+            <p>All Encore students get stage time! Our studio-wide spring recital performance is a full-scale show with professional lighting, stage crew, and a sold-out audience.</p>
+            <p>Love to entertain? Join one of our winning performance teams or our pre-professional musical theatre company for even more time in the spotlight!</p>
+            <a href="https://encoreperformers1.dncestudios.com/get-started-new" class="btn btn-primary" target="_blank" rel="noopener">JOIN THE SHOW</a>
+          </div>
+          <div class="about-image reveal-right">
+            <img src="../shared/images/class-munchkin.jpg" alt="Young dancers performing at Encore Performers recital" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container container-narrow">
+        <p class="section-label center">FAQ</p>
+        <h2 class="section-title center">Frequently Asked <em>Questions</em></h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What age groups do you offer dance classes for?</summary>
+            <p>We offer dance classes for ages 3 through 18. Our programs include Munchkin & Minis (ages 3-6), Juniors (ages 7-11), Tweens (ages 10-12), and Teens (ages 12-18), plus advanced ITP and ETAP competitive programs.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What styles of dance do you teach?</summary>
+            <p>We offer Jazz, Tap, Hip Hop, Ballet/Pointe, Contemporary, Musical Theatre, Ballroom, and more. Classes are available for all skill levels from beginner to advanced.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you offer a free trial class?</summary>
+            <p>Yes! We offer a FREE trial class for all new students. <a href="https://encoreperformers1.dncestudios.com/get-started-new" target="_blank" rel="noopener">Book your free trial here</a> or call us at 703-222-5511.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Where is Encore Performers located?</summary>
+            <p>We are located at 4299 Henninger Ct, Chantilly, VA 20151, conveniently situated in Northern Virginia.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you have summer dance camps?</summary>
+            <p>Yes! We offer Mini Camps (ages 4-6), themed Dance Camps (ages 6-13) including Broadway, KPOP, Movie Magic, and Disney themes, Intensives for advanced dancers, and evening summer dance classes running July through August.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does my child need prior dance experience?</summary>
+            <p>Not at all! We welcome complete beginners. Our classes are structured by age and ability level so every dancer can learn at their own pace in a supportive environment.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I register for classes?</summary>
+            <p>You can register through our <a href="https://app.gostudiopro.com/online/classes.php?account_id=27537" target="_blank" rel="noopener">Parent Portal</a> or start with a <a href="https://encoreperformers1.dncestudios.com/get-started-new" target="_blank" rel="noopener">free trial class</a>. You can also call us at 703-222-5511 for assistance.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section section-cta">
+      <div class="container center">
+        <h2 class="cta-title">Ready to Dance?</h2>
+        <p class="cta-subtitle">Book your FREE trial class and discover the Encore magic!</p>
+        <a href="https://encoreperformers1.dncestudios.com/get-started-new" class="btn btn-primary btn-large" target="_blank" rel="noopener">BOOK YOUR FREE TRIAL</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-dark">
+      <div class="container">
+        <div class="section-grid">
+          <div class="contact-info reveal-left">
+            <p class="section-label">Get In Touch</p>
+            <h2 class="section-title">Visit Our <em>Studio</em></h2>
+            <div class="contact-details">
+              <div class="contact-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                  <strong>Address</strong>
+                  <p>4299 Henninger Ct<br />Chantilly, VA 20151</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div>
+                  <strong>Phone</strong>
+                  <p><a href="tel:7032225511">703-222-5511</a></p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div>
+                  <strong>Email</strong>
+                  <p><a href="mailto:encoreperformers@gmail.com">encoreperformers@gmail.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://www.instagram.com/encoreperformers/" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/EncorePerformersDance" target="_blank" rel="noopener" aria-label="Facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@encoreperformers5558" target="_blank" rel="noopener" aria-label="YouTube">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@encoreperformers96" target="_blank" rel="noopener" aria-label="TikTok">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="contact-map reveal-right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.5!2d-77.432!3d38.8764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64d8a0c0c7b8b%3A0x1234567890abcdef!2s4299+Henninger+Ct%2C+Chantilly%2C+VA+20151!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Encore Performers location map"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>ENCORE <span>PERFORMERS</span></h3>
+          <p>The Place To Dance</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#programs">Programs</a>
+          <a href="#summer">Summer</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-cta">
+          <a href="https://encoreperformers1.dncestudios.com/get-started-new" class="btn btn-primary" target="_blank" rel="noopener">FREE TRIAL CLASS</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Encore Performers. All rights reserved.</p>
+        <p>4299 Henninger Ct, Chantilly, VA 20151 &bull; <a href="tel:7032225511">703-222-5511</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Register Button (Mobile) -->
+  <a href="https://encoreperformers1.dncestudios.com/get-started-new" class="floating-cta" target="_blank" rel="noopener" id="floating-cta">
+    REGISTER NOW
+  </a>
+
+  <!-- Chatbot -->
+  <style>
+    :root {
+      --chatbot-primary: #e6b422;
+      --chatbot-bg: #1a1a2e;
+      --chatbot-text: #ffffff;
+      --chatbot-bubble-bot: #2a2a4e;
+      --chatbot-bubble-user: #e6b422;
+      --chatbot-user-text: #1a1a2e;
+    }
+  </style>
+  <script src="../shared/chatbot/chatbot.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

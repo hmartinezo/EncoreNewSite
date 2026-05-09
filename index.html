@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encore Performers | Website Mockups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: 4px;
+    }
+    h1 span { color: #c9a96e; }
+    .subtitle {
+      color: rgba(255,255,255,0.4);
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1100px;
+      width: 100%;
+    }
+    .card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.4s ease;
+      text-decoration: none;
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      border-color: rgba(201, 169, 110, 0.5);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .card-preview {
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:nth-child(1) .card-preview { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+    .card:nth-child(2) .card-preview { background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%); }
+    .card:nth-child(3) .card-preview { background: linear-gradient(135deg, #111 0%, #333 100%); }
+    .card-preview span {
+      font-size: 48px;
+      font-weight: 200;
+      letter-spacing: 6px;
+      opacity: 0.3;
+    }
+    .card-body {
+      padding: 24px;
+      background: rgba(255,255,255,0.03);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-num {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 8px;
+    }
+    .card-body h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .card-body p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .card-colors {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .swatch {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .card-arrow {
+      margin-top: 16px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #c9a96e;
+    }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      color: rgba(255,255,255,0.2);
+      font-size: 12px;
+    }
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; max-width: 400px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Encore <span>Performers</span></h1>
+  <p class="subtitle">Website Mockups</p>
+
+  <div class="grid">
+    <a href="mockup-1/" class="card">
+      <div class="card-preview"><span>01</span></div>
+      <div class="card-body">
+        <span class="card-num">Mockup 01</span>
+        <h2>Elegant Dark</h2>
+        <p>Dark navy & gold. Cinematic hero video, parallax effects, GSAP animations, and flowing sections.</p>
+        <div class="card-colors">
+          <span class="swatch" style="background:#1a1a2e;"></span>
+          <span class="swatch" style="background:#e6b422;"></span>
+          <span class="swatch" style="background:#f5f0eb;"></span>
+        </div>
+        <span class="card-arrow">View Mockup &rarr;</span>
+      </div>
+    </a>
+
+    <a href="mockup-2/" class="card">
+      <div class="card-preview"><span>02</span></div>
+      <div class="card-body">
+        <span class="card-num">Mockup 02</span>
+        <h2>Bright & Bold</h2>
+        <p>Coral & teal gradients. Split-screen hero, flip-card programs, wave dividers, and playful energy.</p>
+        <div class="card-colors">
+          <span class="swatch" style="background:#ff6b6b;"></span>
+          <span class="swatch" style="background:#4ecdc4;"></span>
+          <span class="swatch" style="background:#a78bfa;"></span>
+        </div>
+        <span class="card-arrow">View Mockup &rarr;</span>
+      </div>
+    </a>
+
+    <a href="mockup-3/" class="card">
+      <div class="card-preview"><span>03</span></div>
+      <div class="card-body">
+        <span class="card-num">Mockup 03</span>
+        <h2>Cinematic Minimal</h2>
+        <p>White, black & muted gold. Apple-style minimalism, Ken Burns hero, horizontal scroll, side nav dots.</p>
+        <div class="card-colors">
+          <span class="swatch" style="background:#ffffff; border-color:#ccc;"></span>
+          <span class="swatch" style="background:#111111;"></span>
+          <span class="swatch" style="background:#c9a96e;"></span>
+        </div>
+        <span class="card-arrow">View Mockup &rarr;</span>
+      </div>
+    </a>
+  </div>
+
+  <footer>&copy; 2026 Encore Performers &middot; Mockup Preview</footer>
+</body>
+</html>

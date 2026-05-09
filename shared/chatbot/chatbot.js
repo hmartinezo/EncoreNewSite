@@ -133,18 +133,25 @@ RULES:
     return 'Great question! For the most accurate answer, please call us at 703-222-5511 or email encoreperformers@gmail.com. You can also book a free trial class at encoreperformers1.dncestudios.com/get-started-new!';
   }
 
+  // --- Icon variant config ---
+  const SHOES_SVG = `<svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><path fill="#F4ABBA" d="M23.27.108C25.631.042 32.366 2.7 32.366 18.25c-.147 2.005-.342 9.193-5.379 12.714h-5.33c-1.027-.44-2.445-2.249-2.445-8.362 0-1.809 1.43-6.741 1.467-8.118.081-3.042-.634-4.525-1.842-7.531C17.304 3.14 19.749.205 23.27.108z"/><path fill="#EA596E" d="M29.408 7.443c.631 1.565 4.066 13.431-2.491 13.529-1.649.13-4.613-.179-2.14-7.906.947-2.494-1.367-7.637-1.579-8.655-.316-1.516 2.263-3.13 3.999-.831 1.555 2.057 2.211 3.863 2.211 3.863z"/><path fill="#F4ABBA" d="M23.401 20.622c-.283 0-.558-.146-.711-.407-.23-.393-.099-.896.294-1.126 3.134-1.837 6.378-6.191 7.165-7.913.189-.414.675-.597 1.092-.406.413.189.595.678.406 1.091-.886 1.936-4.356 6.613-7.831 8.648-.13.077-.273.113-.415.113z"/><path fill="#F4ABBA" d="M31.42 17.688c-.064 0-.13-.007-.195-.023-1.504-.366-6.195-2.541-8.011-6.311-.197-.41-.025-.902.384-1.099.412-.198.902-.025 1.099.384 1.54 3.196 5.668 5.122 6.917 5.426.442.107.713.553.605.995-.092.376-.429.628-.799.628zM12.338 4.963c-2.371-.066-9.137 2.603-9.137 18.224.147 2.014.344 9.235 5.403 12.772h5.354c1.032-.442 2.456-2.26 2.456-8.4 0-1.818-1.398-6.773-1.474-8.154-.186-3.401.637-4.545 1.85-7.565 1.541-3.832-.915-6.779-4.452-6.877z"/><path fill="#EA596E" d="M6.172 12.331c-.634 1.572-4.084 13.492 2.502 13.59 1.656.131 4.634-.18 2.15-7.941-.951-2.505 1.373-7.672 1.586-8.695.317-1.523-2.273-3.144-4.017-.835-1.562 2.067-2.221 3.881-2.221 3.881z"/><path fill="#F4ABBA" d="M12.206 25.569c-.142 0-.286-.037-.417-.113-3.49-2.045-6.976-6.742-7.866-8.687-.19-.416-.007-.906.408-1.096.416-.19.906-.008 1.096.408.792 1.73 4.05 6.104 7.198 7.948.394.231.526.738.295 1.132-.153.262-.43.408-.714.408z"/><path fill="#F4ABBA" d="M4.211 22.563c-.373 0-.711-.254-.803-.632-.108-.443.164-.891.607-.999 1.247-.303 5.361-2.219 6.89-5.391.199-.412.694-.583 1.104-.386.412.198.584.693.386 1.104-1.946 4.038-6.873 6.009-7.988 6.281-.066.016-.132.023-.196.023z"/></svg>`;
+
+  function getIconVariant() {
+    const script = document.querySelector('script[src*="chatbot.js"]');
+    return script ? script.getAttribute('data-icon') : null;
+  }
+
   // --- UI ---
   function createWidget() {
+    const iconVariant = getIconVariant();
+
     // Container
     const container = document.createElement('div');
     container.id = 'encore-chatbot';
+    if (iconVariant) container.setAttribute('data-icon', iconVariant);
     container.innerHTML = `
       <button id="encore-chat-toggle" aria-label="Chat with Tutu, our AI assistant">
-        <svg width="32" height="32" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-          <circle cx="58" cy="18" r="9"/>
-          <path d="M55 27 C50 35, 42 40, 38 52 L28 48 C26 47, 24 49, 25 51 L38 56 C36 62, 35 68, 36 74 L30 90 C29 93, 33 94, 34 91 L40 75 C42 75, 44 75, 46 74 L52 91 C53 94, 57 93, 56 90 L50 74 C52 68, 52 62, 50 56 L60 40 C64 38, 72 36, 78 38 C81 39, 82 35, 79 34 C72 31, 63 32, 58 35 L62 27 C60 25, 56 25, 55 27Z"/>
-          <path d="M38 52 C30 55, 24 50, 20 44 C18 41, 14 43, 16 46 C21 54, 28 58, 38 56Z" opacity="0.9"/>
-        </svg>
+        ${SHOES_SVG}
       </button>
       <div id="encore-chat-window" class="encore-chat-hidden">
         <div id="encore-chat-header">
@@ -190,7 +197,17 @@ RULES:
         box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         display: flex; align-items: center; justify-content: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 0;
       }
+      #encore-chat-toggle svg { filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15)); }
+      /* Icon variant 3: Purple */
+      [data-icon="3"] #encore-chat-toggle { background: #6c3fc5; }
+      [data-icon="3"] #encore-chat-toggle svg { filter: brightness(1.2) drop-shadow(0 1px 2px rgba(0,0,0,0.2)); }
+      /* Icon variant 9: White */
+      [data-icon="9"] #encore-chat-toggle { background: #ffffff; border: 2px solid #ddd; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+      /* Icon variant 10: Coral-purple gradient */
+      [data-icon="10"] #encore-chat-toggle { background: linear-gradient(135deg, #ff6b6b, #a78bfa); }
+      [data-icon="10"] #encore-chat-toggle svg { filter: brightness(1.2) drop-shadow(0 1px 2px rgba(0,0,0,0.2)); }
       #encore-chat-toggle:hover {
         transform: scale(1.1);
         box-shadow: 0 6px 28px rgba(0,0,0,0.4);

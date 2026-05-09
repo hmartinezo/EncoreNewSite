@@ -311,6 +311,67 @@
       font-size: 12px;
     }
 
+    /* --- PHOTO GALLERY --- */
+    .hero-gallery {
+      display: grid; grid-template-columns: 1fr 1.4fr 1fr;
+      gap: 16px; margin-top: 56px;
+      max-width: 800px; margin-left: auto; margin-right: auto;
+    }
+    .hero-gallery img {
+      width: 100%; height: 200px; object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 8px 32px rgba(124,58,237,0.12);
+      transition: transform 0.3s;
+    }
+    .hero-gallery img:hover { transform: scale(1.03); }
+    .hero-gallery img:nth-child(2) { height: 220px; margin-top: -10px; }
+
+    /* --- PHOTO FEATURE --- */
+    .photo-feature {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: center;
+    }
+    .photo-feature-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+    .photo-feature-img img {
+      width: 100%; height: 360px; object-fit: cover;
+      display: block;
+    }
+    .photo-feature-img::after {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: var(--radius);
+      border: 1px solid rgba(124,58,237,0.1);
+      pointer-events: none;
+    }
+    .photo-feature-text h2 { font-size: clamp(26px, 3vw, 36px); margin-bottom: 16px; }
+    .photo-feature-text p {
+      font-size: 15px; color: var(--text-light); line-height: 1.7; margin-bottom: 12px;
+    }
+    .photo-feature-text .highlight {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--primary); font-weight: 600; font-size: 14px;
+    }
+
+    /* --- CAMP IMAGES --- */
+    .camp-card-img {
+      width: 100%; height: 160px; object-fit: cover;
+      border-radius: 12px; margin-bottom: 16px;
+      transition: transform 0.3s;
+    }
+    .camp-card:hover .camp-card-img { transform: scale(1.04); }
+
+    @media (max-width: 768px) {
+      .hero-gallery { grid-template-columns: 1fr; gap: 12px; }
+      .hero-gallery img, .hero-gallery img:nth-child(2) { height: 180px; margin-top: 0; }
+      .photo-feature { grid-template-columns: 1fr; gap: 24px; }
+      .photo-feature-img img { height: 260px; }
+    }
+
     /* --- ANIMATIONS --- */
     .fade-up {
       opacity: 0; transform: translateY(30px);
@@ -374,6 +435,11 @@
           <h3>10+</h3>
           <p>Dance Styles</p>
         </div>
+      </div>
+      <div class="hero-gallery fade-up">
+        <img src="../shared/images/summer-camp.png" alt="Stars on Stage Summer Dance Camp" loading="lazy" />
+        <img src="../shared/images/hero-studio.jpg" alt="Encore Performers dancers in costume" loading="lazy" />
+        <img src="../shared/images/kpop-camp.png" alt="K-Pop Hip Hop Camp for kids" loading="lazy" />
       </div>
     </div>
   </section>
@@ -448,8 +514,24 @@
     </div>
   </section>
 
+  <!-- PHOTO FEATURE -->
+  <section class="why" style="padding-bottom:40px">
+    <div class="container">
+      <div class="photo-feature fade-up">
+        <div class="photo-feature-img">
+          <img src="../shared/images/class-munchkin.jpg" alt="Encore Performers recital on stage" loading="lazy" />
+        </div>
+        <div class="photo-feature-text">
+          <h2>More Than a Dance Studio</h2>
+          <p>From the very first class to the grand recital stage, Encore builds dancers who are confident, expressive, and unstoppable. Our annual production features professional lighting, costumes, and a sold-out audience cheering your child on.</p>
+          <p class="highlight">✦ See them shine on stage every year</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- WHY ENCORE -->
-  <section class="why" id="why">
+  <section class="why" id="why" style="padding-top:40px">
     <div class="container">
       <div class="section-header fade-up">
         <h2>Why Families Choose Encore</h2>
@@ -497,17 +579,17 @@
       </div>
       <div class="camps-grid">
         <div class="camp-card fade-up">
-          <div class="camp-emoji">🎬</div>
+          <img class="camp-card-img" src="../shared/images/movie-camp.png" alt="Movie Magic Dance Camp" loading="lazy" />
           <h3>Movie Magic</h3>
           <p>Ages 6-13 -- Dance to your favorite film soundtracks</p>
         </div>
         <div class="camp-card fade-up">
-          <div class="camp-emoji">🎤</div>
+          <img class="camp-card-img" src="../shared/images/broadway-camp.png" alt="Broadway Dance Intensive" loading="lazy" />
           <h3>Broadway Bound</h3>
           <p>Ages 6-13 -- Sing, act, and dance like a star</p>
         </div>
         <div class="camp-card fade-up">
-          <div class="camp-emoji">🇰🇷</div>
+          <img class="camp-card-img" src="../shared/images/kpop-camp.png" alt="K-Pop Hip Hop Camp" loading="lazy" />
           <h3>K-Pop Dance</h3>
           <p>Ages 6-13 -- Learn trending K-Pop choreography</p>
         </div>

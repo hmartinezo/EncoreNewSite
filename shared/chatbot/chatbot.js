@@ -1,14 +1,14 @@
 /**
  * Encore Performers AI Chatbot Widget
  * Powered by Google Gemini API (gemini-2.5-flash-lite)
- * Rate limited to 20 questions/day per visitor via localStorage
+ * Rate limited to 50 questions/day per visitor via localStorage
  */
 (function () {
   'use strict';
 
   const GEMINI_API_KEY = 'AIzaSyCHQwnmVe_JfEe63FwvkLwtiLZVUqCQexk';
   const GEMINI_MODEL = 'gemini-2.5-flash-lite';
-  const DAILY_LIMIT = 20;
+  const DAILY_LIMIT = 50;
   const LS_KEY = 'encore_chatbot';
 
   const SYSTEM_PROMPT = `You are the friendly AI assistant for Encore Performers, the premier dance studio in Northern Virginia. You answer questions about the studio in a warm, helpful, and concise way. Use 2-3 sentences max unless the question requires more detail.
@@ -140,9 +140,7 @@ RULES:
     container.id = 'encore-chatbot';
     container.innerHTML = `
       <button id="encore-chat-toggle" aria-label="Chat with us">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-        </svg>
+        <span style="font-size:30px;line-height:1" aria-hidden="true">&#x1FA70;</span>
       </button>
       <div id="encore-chat-window" class="encore-chat-hidden">
         <div id="encore-chat-header">

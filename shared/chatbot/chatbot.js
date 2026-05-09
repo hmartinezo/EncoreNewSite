@@ -140,7 +140,27 @@ RULES:
     container.id = 'encore-chatbot';
     container.innerHTML = `
       <button id="encore-chat-toggle" aria-label="Chat with us">
-        <span style="font-size:30px;line-height:1" aria-hidden="true">&#x1FA70;</span>
+        <svg width="36" height="36" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <!-- head -->
+          <circle cx="32" cy="14" r="8" fill="currentColor"/>
+          <!-- body -->
+          <line x1="32" y1="22" x2="32" y2="38" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <!-- arms -->
+          <line x1="32" y1="28" x2="20" y2="24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="32" y1="28" x2="44" y2="22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- tutu skirt -->
+          <ellipse cx="32" cy="38" rx="14" ry="5" fill="currentColor" opacity="0.85"/>
+          <path d="M18 38 Q22 48 26 38" fill="currentColor" opacity="0.6"/>
+          <path d="M24 38 Q28 50 32 38" fill="currentColor" opacity="0.6"/>
+          <path d="M30 38 Q34 50 38 38" fill="currentColor" opacity="0.6"/>
+          <path d="M36 38 Q40 48 44 38" fill="currentColor" opacity="0.6"/>
+          <!-- legs -->
+          <line x1="30" y1="43" x2="26" y2="56" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="34" y1="43" x2="38" y2="56" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- feet (pointe) -->
+          <circle cx="26" cy="57" r="2" fill="currentColor"/>
+          <circle cx="38" cy="57" r="2" fill="currentColor"/>
+        </svg>
       </button>
       <div id="encore-chat-window" class="encore-chat-hidden">
         <div id="encore-chat-header">
